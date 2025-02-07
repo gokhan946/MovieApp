@@ -7,7 +7,7 @@ import {useEffect} from "react"
 
 function App() {
   
-    const [url,setUrl] = React.useState(`https://www.omdbapi.com/?s="top"&type=movie&page=1&apikey=55beeb4d`)
+    const [url,setUrl] = React.useState(`https://www.omdbapi.com/?s="top"&type=movie&page=1&[apikey]`)
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [inputValue, setInputValue] = useState("")
@@ -21,7 +21,7 @@ function App() {
 
     function toggle(){
 
-      setUrl(`https://www.omdbapi.com/?s=${inputValue}&type=movie&page=1&apikey=55beeb4d`)
+      setUrl(`https://www.omdbapi.com/?s=${inputValue}&type=movie&page=1&[apikey]`)
       setBtn(x=>!x)
 
       
